@@ -11,10 +11,13 @@ public class GameManager : MonoBehaviour
     private int PlayerScore;
     private int PlayerHighScore;
     [SerializeField] GameObject LevelCompletePanel;
+    [SerializeField] GameObject PausePanel;
+    [SerializeField] GameObject Player;
 
     void Start()
     {
         LevelCompletePanel.SetActive(false);
+        PausePanel.SetActive(false);
 
     }
 
@@ -45,6 +48,7 @@ public class GameManager : MonoBehaviour
 
     public void RestartLevel()
     {
+        Time.timeScale = 1.0f;
         LevelCompletePanel.SetActive(false);
         SceneManager.LoadScene("SampleScene");
     }
@@ -59,6 +63,20 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("SampleScene");
     }
 
+    public void PauseGame()
+    {
+        Time.timeScale = 0.0f;
+        Player.GetComponent<AudioSource>().Stop();
+        PausePanel.SetActive(true);
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1.0f;
+        Player.GetComponent<AudioSource>().Play();
+        PausePanel.SetActive(false);
+    }
+
     public void ExitGame()
     {
         Application.Quit();
@@ -67,5 +85,6 @@ public class GameManager : MonoBehaviour
     public void QuitToMainMenu()
     {
         SceneManager.LoadScene("MainMenuScene");
+        Time.timeScale = 1.0f;
     }
 }

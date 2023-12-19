@@ -13,6 +13,7 @@ public class DetectorScript : MonoBehaviour
     [SerializeField] GameObject UprisePlayerButton;
     [SerializeField] GameObject LaunchMissileButton;
     [SerializeField] GameObject ScoreText;
+    [SerializeField] GameObject PauseButton;
     [SerializeField] GameObject MissileIcon;
     [SerializeField] ParticleSystem ExplosionEffect;
 
@@ -37,6 +38,7 @@ public class DetectorScript : MonoBehaviour
             GameScorePanel.SetActive(false);
             UprisePlayerButton.SetActive(false);
             LaunchMissileButton.SetActive(false);
+            PauseButton.SetActive(false);
             Manager.ShowlevelCompletePanel();
             GameScoreText.text = $"Score: {Manager.GetPlayerScore()}";
             HighScoreText.text = $"High Score: {Manager.GetPlayerHighScore()}";
@@ -61,6 +63,7 @@ public class DetectorScript : MonoBehaviour
             GameScorePanel.SetActive(false);
             UprisePlayerButton.SetActive(false);
             LaunchMissileButton.SetActive(false);
+            PauseButton.SetActive(false);
             Instantiate(ExplosionEffect, other.gameObject.transform.position,
                         Quaternion.identity); 
             ExplosionEffect.Play();
