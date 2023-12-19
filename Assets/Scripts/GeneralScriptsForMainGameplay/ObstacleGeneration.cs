@@ -31,11 +31,11 @@ public class ObstacleGeneration : MonoBehaviour
             int generateBarrel = Random.Range(0, 2);
             if (generateBarrel == 0)
             {
-                Obstacle.transform.Find("BarrelRed").gameObject.SetActive(false);
+                Obstacle.transform.Find("Barrel").gameObject.SetActive(false);
             }
             else
             {
-                Obstacle.transform.Find("BarrelRed").gameObject.SetActive(true);
+                Obstacle.transform.Find("Barrel").gameObject.SetActive(true);
             }
             Instantiate(Obstacle, transform.position, transform.rotation);
             SendTimer = Frequency;
