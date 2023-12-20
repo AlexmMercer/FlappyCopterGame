@@ -10,6 +10,8 @@ public class MainmenuManager : MonoBehaviour
     [SerializeField] GameObject ShowPanel;
     [SerializeField] GameObject SettingsPanel;
     [SerializeField] TextMeshProUGUI HintText;
+    [SerializeField] TextMeshProUGUI BestScoreText;
+    [SerializeField] GameManager MainGameManager;
 
     private string pcHint = "You cannot allow a helicopter to collide with a crane, skyscraper or tank.\r\n\r\n" +
         "The helicopter constantly pulls down, but if you press the space button, it will throw you up.\r\n\r\n" +
@@ -22,6 +24,7 @@ public class MainmenuManager : MonoBehaviour
     {
         ShowPanel.SetActive(false);
         SettingsPanel.SetActive(false);
+        BestScoreText.text = $"Best: {MainGameManager.GetPlayerHighScore()}";
     }
 
     public void StartLevel()

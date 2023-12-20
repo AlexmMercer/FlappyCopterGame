@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     public int GetPlayerHighScore()
     {
-        return PlayerHighScore;
+        return PlayerPrefs.GetInt("PlayerHighScore", 0);
     }
 
     public void IncreasePlayerScore()
