@@ -1,0 +1,76 @@
+# Blender 3.5.1 MTL File: 'Hochhaus.blend'
+# www.blender.org
+
+newmtl Concrete
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd E:/Engine/Blender/Beton/concrete_rough_wjwjcis/wjwjcis_2K_Albedo.jpg
+map_Ns E:/Engine/Blender/Beton/concrete_rough_wjwjcis/wjwjcis_2K_Roughness.jpg
+map_Bump -bm 1.000000 E:/Engine/Blender/Beton/concrete_rough_wjwjcis/wjwjcis_2K_Normal.jpg
+
+newmtl Concrete.001
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd E:/Engine/Blender/Beton/concrete_rough_wjwjcis/wjwjcis_2K_Albedo.jpg
+map_Ns E:/Engine/Blender/Beton/concrete_rough_wjwjcis/wjwjcis_2K_Roughness.jpg
+map_Bump -bm 1.000000 E:/Engine/Blender/Beton/concrete_rough_wjwjcis/wjwjcis_2K_Normal.jpg
+
+newmtl Door
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd E:/Engine/Blender/Türen/TexturesCom_DoorsMetalSingle0330_M.jpg
+
+newmtl Material.001
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd E:/Tylobix-Texturen/CreativeCommonsTextures/Concrete012_2K_Color.jpg
+map_Ns E:/Tylobix-Texturen/CreativeCommonsTextures/Concrete012_2K_Roughness.jpg
+map_Bump -bm 1.000000 E:/Tylobix-Texturen/CreativeCommonsTextures/Concrete012_2K_NormalDX.jpg
+
+newmtl Metal
+Ka 1.000000 1.000000 1.000000
+Ks 0.177165 0.177165 0.177165
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd E:/Engine/Blender/Metal/Rost/concrete_damaged_vkmjddd/vkmjddd_2K_Albedo.jpg
+map_Ns E:/Engine/Blender/Metal/Rost/concrete_damaged_vkmjddd/vkmjddd_2K_Roughness.jpg
+map_Bump -bm 1.000000 E:/Engine/Blender/Metal/Rost/concrete_damaged_vkmjddd/vkmjddd_2K_Normal.jpg
+
+newmtl Plaster
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd E:/Engine/Blender/Putz/plaster_fresh_vmhhdcnn/vmhhdcnn_2K_Albedo.jpg
+map_Ns E:/Engine/Blender/Putz/plaster_fresh_vmhhdcnn/vmhhdcnn_2K_Roughness.jpg
+
+newmtl Window
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd E:/Engine/Blender/Fenster/TexturesCom_WindowsIndustrial0457_2_M.jpg
