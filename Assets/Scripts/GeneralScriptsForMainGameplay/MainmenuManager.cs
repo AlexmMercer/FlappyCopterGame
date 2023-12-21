@@ -66,4 +66,9 @@ public class MainmenuManager : MonoBehaviour
     {
         HintText.text = pcHint;
     }
+
+    public void PlayClickSound()
+    {
+        gameObject.GetComponent<AudioSource>().Play(); 
+    }
 }

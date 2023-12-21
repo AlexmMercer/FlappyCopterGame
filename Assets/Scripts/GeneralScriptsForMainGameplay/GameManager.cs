@@ -87,4 +87,9 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("MainMenuScene");
         Time.timeScale = 1.0f;
     }
+
+    public void PlayClickSound()
+    {
+        gameObject.GetComponent<AudioSource>().Play();
+    }
 }
