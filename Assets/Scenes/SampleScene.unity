@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44585788, g: 0.625138, b: 0.72396046, a: 1}
+  m_IndirectSpecularColor: {r: 0.44600135, g: 0.624972, b: 0.72263163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3452,6 +3452,30 @@ PrefabInstance:
       propertyPath: BarrelPrefab
       value: 
       objectReference: {fileID: 8796608534677031006, guid: d6e0d472a7d199945adee383b66c9902, type: 3}
+    - target: {fileID: 3043583909146968289, guid: 167481bf8a35fdf49b3269bc1302e681, type: 3}
+      propertyPath: FrequencyLowerBound
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3043583909146968289, guid: 167481bf8a35fdf49b3269bc1302e681, type: 3}
+      propertyPath: FrequencyUpperBound
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3043583909146968289, guid: 167481bf8a35fdf49b3269bc1302e681, type: 3}
+      propertyPath: obstaclePrefabs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3043583909146968289, guid: 167481bf8a35fdf49b3269bc1302e681, type: 3}
+      propertyPath: obstaclePrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 530839328232939304, guid: 5936cfba89d85dd448413d64de4d6288, type: 3}
+    - target: {fileID: 3043583909146968289, guid: 167481bf8a35fdf49b3269bc1302e681, type: 3}
+      propertyPath: obstaclePrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 530839328232939304, guid: 00104232defef4f42b00ebee23fdff5d, type: 3}
+    - target: {fileID: 3043583909146968289, guid: 167481bf8a35fdf49b3269bc1302e681, type: 3}
+      propertyPath: obstaclePrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 530839328232939304, guid: 393afd7eddd188947ab94525e0e2f076, type: 3}
     - target: {fileID: 3348058400919036631, guid: 167481bf8a35fdf49b3269bc1302e681, type: 3}
       propertyPath: m_Name
       value: GameManager
