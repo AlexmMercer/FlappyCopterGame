@@ -50,7 +50,7 @@ public class ObstacleGeneration : MonoBehaviour
             }
             Instantiate(obstacle, transform.position, transform.rotation);
             SendTimer = Frequency;
-            speedCoefficient += 0.01f;
+            speedCoefficient += 0.07f;
         }
     }
 }
