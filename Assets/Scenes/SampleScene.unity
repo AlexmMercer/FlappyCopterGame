@@ -4042,11 +4042,11 @@ PrefabInstance:
       objectReference: {fileID: 8796608534677031006, guid: d6e0d472a7d199945adee383b66c9902, type: 3}
     - target: {fileID: 3043583909146968289, guid: 167481bf8a35fdf49b3269bc1302e681, type: 3}
       propertyPath: FrequencyLowerBound
-      value: 1.2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3043583909146968289, guid: 167481bf8a35fdf49b3269bc1302e681, type: 3}
       propertyPath: FrequencyUpperBound
-      value: 2.5
+      value: 2.1
       objectReference: {fileID: 0}
     - target: {fileID: 3043583909146968289, guid: 167481bf8a35fdf49b3269bc1302e681, type: 3}
       propertyPath: obstaclePrefabs.Array.size

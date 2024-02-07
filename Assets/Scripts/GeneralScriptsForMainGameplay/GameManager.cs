@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 {
     private int PlayerScore;
     private int PlayerHighScore;
+    private int PlayerBalance;
     [SerializeField] GameObject LevelCompletePanel;
     [SerializeField] GameObject PausePanel;
     [SerializeField] GameObject Player;
@@ -31,9 +32,19 @@ public class GameManager : MonoBehaviour
         return PlayerPrefs.GetInt("PlayerHighScore", 0);
     }
 
+    public int GetPlayerBalance()
+    {
+        return PlayerPrefs.GetInt("PlayerBalance", 0);
+    }
+
     public void IncreasePlayerScore()
     {
         PlayerScore++;
+    }
+
+    public void IncreasePlayerBalance()
+    {
+        PlayerBalance++;
     }
 
     public void SetStartPlayerHighScore()

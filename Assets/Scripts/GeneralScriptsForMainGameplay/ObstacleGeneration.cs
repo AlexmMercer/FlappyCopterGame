@@ -6,8 +6,8 @@ using UnityEngine;
 public class ObstacleGeneration : MonoBehaviour
 {
     [SerializeField] float SendTimer = 1;
-    [SerializeField] float FrequencyLowerBound = 1.7f;
-    [SerializeField] float FrequencyUpperBound = 2.5f;
+    [SerializeField] float FrequencyLowerBound = 2.3f;
+    [SerializeField] float FrequencyUpperBound = 2.9f;
     private float Frequency;
     private float speedCoefficient = 1.0f;
     [SerializeField] float Position;
@@ -48,9 +48,18 @@ public class ObstacleGeneration : MonoBehaviour
                     obstacle.transform.Find("Barrel").gameObject.SetActive(true);
                 }
             }
+            int generateCoint = Random.Range(0, 2);
+            if (generateCoint == 0)
+            {
+                obstacle.transform.Find("Coin$").gameObject.SetActive(false);
+            }
+            else
+            {
+                obstacle.transform.Find("Coin$").gameObject.SetActive(true);
+            }
             Instantiate(obstacle, transform.position, transform.rotation);
             SendTimer = Frequency;
-            speedCoefficient += 0.07f;
+            speedCoefficient += 0.01f;
         }
     }
 }
