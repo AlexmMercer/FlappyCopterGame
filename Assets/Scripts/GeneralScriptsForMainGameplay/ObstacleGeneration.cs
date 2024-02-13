@@ -8,23 +8,19 @@ public class ObstacleGeneration : MonoBehaviour
     [SerializeField] float SendTimer = 1;
     [SerializeField] float FrequencyLowerBound = 2.3f;
     [SerializeField] float FrequencyUpperBound = 2.9f;
-    private float Frequency;
-    private float speedCoefficient = 1.0f;
+    [SerializeField] float Frequency;
+    [SerializeField] float speedCoefficient = 1.0f;
     [SerializeField] float Position;
+    [SerializeField] float speedShift = 0.01f;
     [SerializeField] GameObject Obstacle;
     [SerializeField] private GameObject[] obstaclePrefabs;
     [SerializeField] GameObject BarrelPrefab;
 
-    private float obstaclesXPosition = 2.234f;
-    private float obstaclesZPosition = 3.0f;
-    private float obstaclesHeightLowerValue = 6f;
-    private float obstaclesHieghtUpperValue = 11f;
+    [SerializeField] float obstaclesXPosition = 2.234f;
+    [SerializeField] float obstaclesZPosition = 3.0f;
+    [SerializeField] float obstaclesHeightLowerValue = 6f;
+    [SerializeField] float obstaclesHieghtUpperValue = 11f;
 
-
-    private void Start()
-    {
-
-    }
     private void Update()
     {
         Frequency = Random.Range(FrequencyLowerBound, FrequencyUpperBound);
@@ -59,7 +55,7 @@ public class ObstacleGeneration : MonoBehaviour
             }
             Instantiate(obstacle, transform.position, transform.rotation);
             SendTimer = Frequency;
-            speedCoefficient += 0.01f;
+            speedCoefficient += speedShift;
         }
     }
 }
