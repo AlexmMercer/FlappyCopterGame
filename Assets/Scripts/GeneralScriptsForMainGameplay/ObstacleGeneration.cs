@@ -44,14 +44,19 @@ public class ObstacleGeneration : MonoBehaviour
                     obstacle.transform.Find("Barrel").gameObject.SetActive(true);
                 }
             }
-            int generateCoin = Random.Range(0, 10);
-            if (generateCoin == 0)
+            int generateToken = Random.Range(0, 10);
+            if (generateToken == 0)
             {
                 obstacle.transform.Find("Coin$").gameObject.SetActive(true);
+            }
+            else if(generateToken == 1)
+            {
+                obstacle.transform.Find("The Key 1").gameObject.SetActive(true);
             }
             else
             {
                 obstacle.transform.Find("Coin$").gameObject.SetActive(false);
+                obstacle.transform.Find("The Key 1").gameObject.SetActive(false);
             }
             Instantiate(obstacle, transform.position, transform.rotation);
             SendTimer = Frequency;

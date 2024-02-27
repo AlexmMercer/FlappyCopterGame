@@ -48,7 +48,6 @@ public class LaunchMissilesTestScript : MonoBehaviour
         {
             if (hit.collider.gameObject.TryGetComponent<Barrel>(out var barrel))
             {
-                //Debug.Log("Barrel detected!");
                 return true;
             }
             else

@@ -154,6 +154,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI ProgressBarCircle
       objectReference: {fileID: 0}
+    - target: {fileID: 1295904187628084, guid: 24d5ab3d18c91fc41a2213a537e21ee7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 82813298609058048, guid: 24d5ab3d18c91fc41a2213a537e21ee7, type: 3}
       propertyPath: MaxDistance
       value: 111.515625
@@ -2959,7 +2963,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -483.90002, y: -51}
+  m_AnchoredPosition: {x: -167, y: -51}
   m_SizeDelta: {x: 1053.6707, y: 967.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &649646485
@@ -4723,7 +4727,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1115620916
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7075,7 +7079,7 @@ RectTransform:
   m_GameObject: {fileID: 1908552859}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.0094, y: 1.1065344, z: 0.6250981}
+  m_LocalScale: {x: 1.0244975, y: 0.94026655, z: 0.5311709}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 67313721}
@@ -7105,7 +7109,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c3837dd7437cde044b8fce75ab211954, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 31f28161b1367eb4d8d7c44eac00755d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7140,7 +7144,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1923382234
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7451,7 +7455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2023368722
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7842,7 +7846,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -801, y: -54}
+  m_AnchoredPosition: {x: -484.09998, y: -54}
   m_SizeDelta: {x: 1053.6707, y: 967.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2076325495
