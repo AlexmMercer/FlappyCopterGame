@@ -24,6 +24,7 @@ public class LaunchMissilesTestScript : MonoBehaviour
         }
         if (missileLaunched && currentMissile != null)
         {
+            currentMissile.transform.SetParent(null);
             currentMissile.transform.Translate(Vector3.forward * 15.0f * Time.deltaTime);
         }
     }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShootMachineGunScript : MonoBehaviour
 {
     [SerializeField] GameObject ShootPosition;
+    [SerializeField] GameObject ShootEffect;
     [SerializeField] GameObject Bullet;
 
     private bool bulletLaunched = false;
@@ -46,7 +47,7 @@ public class ShootMachineGunScript : MonoBehaviour
 
     IEnumerator ReloadAfterDelay()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.05f);
         ReloadMissile();
         Debug.Log("???????????.");
     }
@@ -54,8 +55,11 @@ public class ShootMachineGunScript : MonoBehaviour
     void ReloadMissile()
     {
         bulletLaunched = false;
+        var shootEffect = Instantiate(ShootEffect, ShootPosition.transform.position, ShootEffect.transform.rotation);
+        shootEffect.transform.SetParent(ShootPosition.transform);
+        shootEffect.GetComponent<ParticleSystem>().Play();
         currentBullet = Instantiate(Bullet, ShootPosition.transform.position, Quaternion.identity);
         currentBullet.transform.SetParent(null);
-        currentBullet.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 300.0f);
+        currentBullet.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 900.0f);
     }
 }

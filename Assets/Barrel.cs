@@ -5,11 +5,24 @@ using UnityEngine;
 public class Barrel : MonoBehaviour
 {
     [SerializeField] ParticleSystem ExplosionEffect;
+    [SerializeField] int LifeVal = 3;
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.TryGetComponent<Missile>(out var missile))
         {
-            gameObject.transform.Find("audioPlayComponent").GetComponent<AudioSource>().Play();
+            LifeVal -= LifeVal;
+            Destroy(other.gameObject);
+        } else if(other.gameObject.TryGetComponent<Bullet>(out var bullet))
+        {
+            LifeVal--;
+            Destroy(other.gameObject);
+        }
+    }
+
+    private void Update()
+    {
+        if(LifeVal == 0)
+        {
             Instantiate(ExplosionEffect, transform.position,
             Quaternion.identity);
             ExplosionEffect.Play();

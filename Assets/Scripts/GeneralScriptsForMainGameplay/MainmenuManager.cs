@@ -12,6 +12,7 @@ public class MainmenuManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI HintText;
     [SerializeField] TextMeshProUGUI BestScoreText;
     [SerializeField] GameManager MainGameManager;
+    [SerializeField] GameObject ShopPanel;
 
     private string pcHint = "You cannot allow a helicopter to collide with a crane, skyscraper or tank.\r\n\r\n" +
         "The helicopter constantly pulls down, but if you press the space button, it will throw you up.\r\n\r\n" +
@@ -70,5 +71,15 @@ public class MainmenuManager : MonoBehaviour
     public void PlayClickSound()
     {
         gameObject.GetComponent<AudioSource>().Play(); 
+    }
+
+    public void ShowStore()
+    {
+        ShopPanel.SetActive(true);
+    }
+
+    public void CloseStore()
+    {
+        ShopPanel.SetActive(false);
     }
 }
