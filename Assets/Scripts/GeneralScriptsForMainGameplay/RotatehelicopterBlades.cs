@@ -11,6 +11,6 @@ public class RotatehelicopterBlades : MonoBehaviour
     void Update()
     {
         MainBlades.transform.Rotate(new Vector3(0, 0, 1), BladesRotationSpeed * Time.deltaTime);
-        TailBlades.transform.Rotate(new Vector3(1, 0, 0), BladesRotationSpeed * Time.deltaTime);
+        TailBlades.transform.Rotate(new Vector3(0, 0, 1), BladesRotationSpeed * Time.deltaTime);
     }
 }
