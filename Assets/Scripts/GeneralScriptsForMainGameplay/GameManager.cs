@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -11,14 +12,20 @@ public class GameManager : MonoBehaviour
     private int PlayerScore;
     private int PlayerHighScore;
     private int PlayerBalance;
+    private Vector3 defaultLevelCompleteWindowSize;
+    private Vector3 defaultPauseGameWindowSize;
     [SerializeField] GameObject LevelCompletePanel;
     [SerializeField] GameObject PausePanel;
     [SerializeField] GameObject Player;
 
     void Start()
     {
-        LevelCompletePanel.SetActive(false);
-        PausePanel.SetActive(false);
+        LevelCompletePanel.SetActive(true);
+        PausePanel.SetActive(true);
+        defaultLevelCompleteWindowSize = LevelCompletePanel.transform.localScale;
+        defaultPauseGameWindowSize = PausePanel.transform.localScale;
+        LevelCompletePanel.transform.localScale = new Vector3(0, 0, 0);
+        PausePanel.transform.localScale = new Vector3(0, 0, 0);
 
     }
 
@@ -66,7 +73,7 @@ public class GameManager : MonoBehaviour
 
     public void ShowlevelCompletePanel()
     {
-        LevelCompletePanel.SetActive(true);
+        LevelCompletePanel.transform.DOScale(defaultLevelCompleteWindowSize, 0.5f);
     }
 
     public void StartLevel()
@@ -76,16 +83,22 @@ public class GameManager : MonoBehaviour
 
     public void PauseGame()
     {
-        Time.timeScale = 0.0f;
         Player.GetComponent<AudioSource>().Stop();
-        PausePanel.SetActive(true);
+        PausePanel.transform.DOScale(defaultPauseGameWindowSize, 0.5f);
+        StartCoroutine(StopTimeAfterDelay());
+    }
+
+    private IEnumerator StopTimeAfterDelay()
+    {
+        yield return new WaitForSeconds(0.51f);
+        Time.timeScale = 0.0f;
     }
 
     public void ResumeGame()
     {
         Time.timeScale = 1.0f;
         Player.GetComponent<AudioSource>().Play();
-        PausePanel.SetActive(false);
+        PausePanel.transform.DOScale(new Vector3(0, 0, 0), 0.2f);
     }
 
     public void ExitGame()
