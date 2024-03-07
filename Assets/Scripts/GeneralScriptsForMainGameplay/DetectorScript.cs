@@ -13,6 +13,8 @@ public class DetectorScript : MonoBehaviour
     [SerializeField] GameObject UprisePlayerButton;
     [SerializeField] GameObject LaunchMissileButton;
     [SerializeField] GameObject ScoreText;
+    [SerializeField] GameObject CoinText;
+    [SerializeField] GameObject KeyText;
     [SerializeField] GameObject PauseButton;
     [SerializeField] GameObject MissileIcon;
     [SerializeField] ParticleSystem ExplosionEffect;
@@ -52,6 +54,16 @@ public class DetectorScript : MonoBehaviour
                 Manager.SetPlayerHighScore();
             }
             ScoreText.GetComponent<TextMeshProUGUI>().text = $"{Manager.GetPlayerScore()}";
+        } else if(other.gameObject.TryGetComponent<Coin>(out var coin))
+        {
+            Manager.IncreasePlayeCoinBalance();
+            Manager.SetPlayerCoinScore();
+            CoinText.GetComponent<TextMeshProUGUI>().text = $"{Manager.GetPlayerCoinBalance()}";
+        } else if(other.gameObject.TryGetComponent<Key>(out var key))
+        {
+            Manager.IncreasePlayeKeyBalance();
+            Manager.SetPlayerKeyScore();
+            KeyText.GetComponent<TextMeshProUGUI>().text = $"{Manager.GetPlayerCoinBalance()}";
         } else if(other.gameObject.TryGetComponent<Barrel>(out var barrel))
         {
             Instantiate(ExplosionEffect, transform.position,

@@ -7227,6 +7227,8 @@ MonoBehaviour:
   UprisePlayerButton: {fileID: 1042352123}
   LaunchMissileButton: {fileID: 944093528}
   ScoreText: {fileID: 715977121}
+  CoinText: {fileID: 2062870807}
+  KeyText: {fileID: 599472046}
   PauseButton: {fileID: 1160810354}
   MissileIcon: {fileID: 658726357}
   ExplosionEffect: {fileID: 2686042672168086182, guid: 3a2796fca504bc848b1694cb0d04dfbb, type: 3}

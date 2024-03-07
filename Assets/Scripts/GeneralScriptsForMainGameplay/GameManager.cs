@@ -11,7 +11,8 @@ public class GameManager : MonoBehaviour
 {
     private int PlayerScore;
     private int PlayerHighScore;
-    private int PlayerBalance;
+    private int PlayerCoinBalance;
+    private int PlayerKeyBalance;
     private Vector3 defaultLevelCompleteWindowSize;
     private Vector3 defaultPauseGameWindowSize;
     [SerializeField] GameObject LevelCompletePanel;
@@ -39,9 +40,14 @@ public class GameManager : MonoBehaviour
         return PlayerPrefs.GetInt("PlayerHighScore", 0);
     }
 
-    public int GetPlayerBalance()
+    public int GetPlayerCoinBalance()
     {
-        return PlayerPrefs.GetInt("PlayerBalance", 0);
+        return PlayerPrefs.GetInt("PlayerCoinBalance", 0);
+    }
+
+    public int GetPlayerKeyBalance()
+    {
+        return PlayerPrefs.GetInt("PlayerKeyBalance", 0);
     }
 
     public void IncreasePlayerScore()
@@ -49,9 +55,14 @@ public class GameManager : MonoBehaviour
         PlayerScore++;
     }
 
-    public void IncreasePlayerBalance()
+    public void IncreasePlayeCoinBalance()
     {
-        PlayerBalance++;
+        PlayerCoinBalance++;
+    }
+
+    public void IncreasePlayeKeyBalance()
+    {
+        PlayerKeyBalance++;
     }
 
     public void SetStartPlayerHighScore()
@@ -62,6 +73,16 @@ public class GameManager : MonoBehaviour
     public void SetPlayerHighScore()
     {
         PlayerPrefs.SetInt("PlayerHighScore", PlayerScore);
+    }
+
+    public void SetPlayerCoinScore()
+    {
+        PlayerPrefs.SetInt("PlayerCoinBalance", PlayerCoinBalance);
+    }
+
+    public void SetPlayerKeyScore()
+    {
+        PlayerPrefs.SetInt("PlayerKeyBalance", PlayerKeyBalance);
     }
 
     public void RestartLevel()
