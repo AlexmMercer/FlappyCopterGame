@@ -11,6 +11,8 @@ public class MainmenuManager : MonoBehaviour
     [SerializeField] GameObject SettingsPanel;
     [SerializeField] TextMeshProUGUI HintText;
     [SerializeField] TextMeshProUGUI BestScoreText;
+    [SerializeField] TextMeshProUGUI CoinsBalanceText;
+    [SerializeField] TextMeshProUGUI KeysBalanceText;
     [SerializeField] GameManager MainGameManager;
     [SerializeField] GameObject ShopPanel;
 
@@ -25,6 +27,8 @@ public class MainmenuManager : MonoBehaviour
     {
         ShowPanel.SetActive(false);
         SettingsPanel.SetActive(false);
+        CoinsBalanceText.text = $"{MainGameManager.GetPlayerCoinBalance()}";
+        KeysBalanceText.text = $"{MainGameManager.GetPlayerKeyBalance()}";
         BestScoreText.text = $"Best: {MainGameManager.GetPlayerHighScore()}";
     }
 
