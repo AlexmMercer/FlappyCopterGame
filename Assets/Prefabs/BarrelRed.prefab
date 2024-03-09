@@ -331,6 +331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionEffect: {fileID: 8171584344383311072, guid: d3a38905044c6d24ba78117cc8a546ca, type: 3}
+  DamageEffect: {fileID: 893952671028674493, guid: 23a9b3583a9775b469cec84a2242e43d, type: 3}
   LifeVal: 3
 --- !u!65 &1941814955208745183
 BoxCollider:
