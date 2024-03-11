@@ -58,6 +58,7 @@ public class ShootMachineGunScript : MonoBehaviour
         var shootEffect = Instantiate(ShootEffect, ShootPosition.transform.position, ShootEffect.transform.rotation);
         shootEffect.transform.SetParent(ShootPosition.transform);
         shootEffect.GetComponent<ParticleSystem>().Play();
+        GetComponent<AudioSource>().Play();
         currentBullet = Instantiate(Bullet, ShootPosition.transform.position, Bullet.transform.rotation);
         currentBullet.transform.SetParent(null);
         currentBullet.GetComponent<Rigidbody>().AddRelativeForce(-Vector3.forward * 900.0f);

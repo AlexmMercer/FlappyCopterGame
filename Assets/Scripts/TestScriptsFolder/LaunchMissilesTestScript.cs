@@ -10,9 +10,11 @@ public class LaunchMissilesTestScript : MonoBehaviour
     private bool missileLaunched = false;
     private GameObject currentMissile;
 
+    // 1.17f, 0.6f, -2.9f
+
     private void Start()
     {
-        currentMissile = Instantiate(Missile, LaunchPosition.transform.position, Quaternion.identity);
+        currentMissile = Instantiate(Missile, LaunchPosition.transform.position, LaunchPosition.transform.rotation);
         currentMissile.transform.SetParent(LaunchPosition.transform);
     }
 
@@ -25,13 +27,13 @@ public class LaunchMissilesTestScript : MonoBehaviour
         if (missileLaunched && currentMissile != null)
         {
             currentMissile.transform.SetParent(null);
-            currentMissile.transform.Translate(Vector3.forward * 15.0f * Time.deltaTime);
+            currentMissile.transform.Translate(-Vector3.right * 15.0f * Time.deltaTime);
         }
     }
 
     public void LaunchMissileFromButton()
     {
-        if (!missileLaunched && IsShootApproved() == true)
+        if (!missileLaunched)
         {
             Debug.Log("Цель обнаружена. Запускаю ракету.");
             missileLaunched = true;
@@ -66,7 +68,6 @@ public class LaunchMissilesTestScript : MonoBehaviour
     {
         if (currentMissile != null)
         {
-            currentMissile.transform.Find("smoke").GetComponent<ParticleSystem>().Play();
             currentMissile.transform.Find("fire").GetComponent<ParticleSystem>().Play();
             currentMissile.GetComponent<AudioSource>().Play();
             yield return null;
@@ -83,7 +84,7 @@ public class LaunchMissilesTestScript : MonoBehaviour
     void ReloadMissile()
     {
         missileLaunched = false;
-        currentMissile = Instantiate(Missile, LaunchPosition.transform.position, Quaternion.identity);
+        currentMissile = Instantiate(Missile, LaunchPosition.transform.position, LaunchPosition.transform.rotation);
         currentMissile.transform.SetParent(LaunchPosition.transform);
     }
 }
