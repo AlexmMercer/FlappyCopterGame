@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     private Vector3 defaultPauseGameWindowSize;
     [SerializeField] GameObject LevelCompletePanel;
     [SerializeField] GameObject PausePanel;
+    [SerializeField] GameObject ControlPanel;
     [SerializeField] GameObject Player;
 
     void Start()
@@ -97,6 +98,11 @@ public class GameManager : MonoBehaviour
         LevelCompletePanel.transform.DOScale(defaultLevelCompleteWindowSize, 0.5f);
     }
 
+    public void HidelevelCompletePanel()
+    {
+        LevelCompletePanel.transform.DOScale(Vector3.zero, 0.5f);
+    }
+
     public void StartLevel()
     {
         SceneManager.LoadScene("SampleScene");
@@ -136,6 +142,14 @@ public class GameManager : MonoBehaviour
     public void PlayClickSound()
     {
         gameObject.GetComponent<AudioSource>().Play();
+    }
+
+    public void RevivePlayer()
+    {
+        HidelevelCompletePanel();
+        gameObject.GetComponent<ObstacleGeneration>().enabled = true;
+        gameObject.GetComponent<ParallaxCityEffect>().enabled = true;
+        Player.SetActive(true);
     }
 
 }

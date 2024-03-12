@@ -31,11 +31,10 @@ public class DetectorScript : MonoBehaviour
             Instantiate(ExplosionEffect, transform.position,
                         Quaternion.identity);
             ExplosionEffect.Play();
-            Destroy(gameObject);
+            gameObject.SetActive(false);
             gameObject.GetComponent<AudioSource>().Stop();
             other.gameObject.GetComponent<AudioSource>().Play();
             Debug.Log("Game over!");
-            //ScoreText.SetActive(false);
             MissileIcon.SetActive(false);
             GameScorePanel.SetActive(false);
             UprisePlayerButton.SetActive(false);
@@ -44,6 +43,8 @@ public class DetectorScript : MonoBehaviour
             Manager.ShowlevelCompletePanel();
             GameScoreText.text = $"Score: {Manager.GetPlayerScore()}";
             HighScoreText.text = $"High Score: {Manager.GetPlayerHighScore()}";
+            Manager.GetComponent<ObstacleGeneration>().enabled = false;
+            Manager.GetComponent<ParallaxCityEffect>().enabled = false;
         } else if(other.gameObject.TryGetComponent<PointZone>(out var pointZone))
         {
             other.gameObject.GetComponent<AudioSource>().Play();
@@ -69,7 +70,7 @@ public class DetectorScript : MonoBehaviour
             Instantiate(ExplosionEffect, transform.position,
                         Quaternion.identity);
             ExplosionEffect.Play();
-            Destroy(gameObject);
+            gameObject.SetActive(false);
             ScoreText.SetActive(false);
             MissileIcon.SetActive(false);
             GameScorePanel.SetActive(false);
@@ -83,6 +84,8 @@ public class DetectorScript : MonoBehaviour
             Manager.ShowlevelCompletePanel();
             GameScoreText.text = $"Score: {Manager.GetPlayerScore()}";
             HighScoreText.text = $"High Score: {Manager.GetPlayerHighScore()}";
+            Manager.GetComponent<ObstacleGeneration>().enabled = false;
+            Manager.GetComponent<ParallaxCityEffect>().enabled = false;
         }
     }
 }
