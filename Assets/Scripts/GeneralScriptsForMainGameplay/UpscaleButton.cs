@@ -9,7 +9,7 @@ public class UpscaleButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 {
     private Button button;
     private Vector3 defaultSize;
-    [SerializeField] private float scaleCoefficient = 1.2f;
+    [SerializeField]  float scaleCoefficient = 1.2f;
 
     // Start is called before the first frame update
     void Start()

@@ -12,6 +12,7 @@ public class DetectorScript : MonoBehaviour
     [SerializeField] GameObject GameScorePanel;
     [SerializeField] GameObject UprisePlayerButton;
     [SerializeField] GameObject LaunchMissileButton;
+    [SerializeField] GameObject LaunchBulletButton;
     [SerializeField] GameObject ScoreText;
     [SerializeField] GameObject CoinText;
     [SerializeField] GameObject KeyText;
@@ -39,6 +40,7 @@ public class DetectorScript : MonoBehaviour
             GameScorePanel.SetActive(false);
             UprisePlayerButton.SetActive(false);
             LaunchMissileButton.SetActive(false);
+            LaunchBulletButton.SetActive(false);
             PauseButton.SetActive(false);
             Manager.ShowlevelCompletePanel();
             GameScoreText.text = $"Score: {Manager.GetPlayerScore()}";
@@ -71,6 +73,7 @@ public class DetectorScript : MonoBehaviour
                         Quaternion.identity);
             ExplosionEffect.Play();
             gameObject.SetActive(false);
+            LaunchBulletButton.SetActive(true);
             ScoreText.SetActive(false);
             MissileIcon.SetActive(false);
             GameScorePanel.SetActive(false);

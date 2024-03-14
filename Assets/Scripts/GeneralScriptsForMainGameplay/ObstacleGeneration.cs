@@ -44,7 +44,7 @@ public class ObstacleGeneration : MonoBehaviour
                     obstacle.transform.Find("Barrel").gameObject.SetActive(true);
                 }
             }
-            int generateToken = Random.Range(0, 10);
+/*            int generateToken = Random.Range(0, 10);
             if (generateToken == 0)
             {
                 obstacle.transform.Find("Coin$").gameObject.SetActive(true);
@@ -57,7 +57,7 @@ public class ObstacleGeneration : MonoBehaviour
             {
                 obstacle.transform.Find("Coin$").gameObject.SetActive(false);
                 obstacle.transform.Find("The Key 1").gameObject.SetActive(false);
-            }
+            }*/
             Instantiate(obstacle, transform.position, transform.rotation);
             SendTimer = Frequency;
             speedCoefficient += speedShift;

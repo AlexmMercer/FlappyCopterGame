@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject GameScorePanel;
     [SerializeField] GameObject UprisePlayerButton;
     [SerializeField] GameObject LaunchMissileButton;
+    [SerializeField] GameObject LaunchBulletButton;
     [SerializeField] GameObject PauseButton;
     [SerializeField] AudioClip ExplosionClip;
     //[SerializeField] GameObject ScoreText;
@@ -26,7 +27,7 @@ public class PlayerController : MonoBehaviour
     {
         GameScorePanel.SetActive(true);
         UprisePlayerButton.SetActive(true);
-        LaunchMissileButton.SetActive(true);
+        //LaunchMissileButton.SetActive(true);
         gameObject.GetComponent<AudioSource>().Play();
     }
 
@@ -41,7 +42,7 @@ public class PlayerController : MonoBehaviour
             //ScoreText.SetActive(false);
             GameScorePanel.SetActive(false);
             UprisePlayerButton.SetActive(false);
-            LaunchMissileButton.SetActive(false);
+            LaunchBulletButton.SetActive(false);
             PauseButton.SetActive(false);
             Manager.ShowlevelCompletePanel();
             GameScoreText.text = $"Score: {Manager.GetPlayerScore()}";

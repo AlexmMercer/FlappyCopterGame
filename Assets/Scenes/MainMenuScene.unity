@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'BUY
+  m_text: 'SOON
 
 '
   m_isRightToLeft: 0
@@ -603,7 +603,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &67313721
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1401,8 +1401,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -115.69007}
-  m_SizeDelta: {x: 0, y: -144.0956}
+  m_AnchoredPosition: {x: 0, y: -152.34604}
+  m_SizeDelta: {x: 0, y: 149.1875}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &234357525
 MonoBehaviour:
@@ -1520,7 +1520,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 240596226}
   m_OnClick:
     m_PersistentCalls:
@@ -3783,7 +3783,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &649646484
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4115,7 +4115,6 @@ GameObject:
   - component: {fileID: 727839973}
   - component: {fileID: 727839972}
   - component: {fileID: 727839971}
-  - component: {fileID: 727839974}
   - component: {fileID: 727839975}
   m_Layer: 5
   m_Name: HintButton
@@ -4188,9 +4187,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 901171967}
-        m_TargetAssemblyTypeName: UpscaleButton, Assembly-CSharp
-        m_MethodName: OnButtonClick
+      - m_Target: {fileID: 901171962}
+        m_TargetAssemblyTypeName: MainmenuManager, Assembly-CSharp
+        m_MethodName: ShowPCHint
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4238,51 +4237,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 727839969}
   m_CullTransparentMesh: 1
---- !u!114 &727839974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 727839969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 901171961}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: 
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 1
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 901171961}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: 
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 1
 --- !u!114 &727839975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4290,7 +4244,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 727839969}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea09d408544216b41a85c890d32db586, type: 3}
   m_Name: 
@@ -6882,8 +6836,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The helicopter constantly pulls down, but if you press the space button,
-    it will throw you up.
+  m_text: 'The helicopter constantly pulls down, but if you press the space button(or
+    touch the button with the arrow up, if you play on mobile device), it will throw
+    you up.
 
 '
   m_isRightToLeft: 0
@@ -6996,7 +6951,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -909, y: 314}
+  m_AnchoredPosition: {x: -909, y: 449}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1195030646
@@ -7019,9 +6974,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: To hit the barrel you should press button 2, after which the rocket will
-    be launched. However, be aware that missiles take time to reload, and you cannot
-    fire a missile unless it is aimed at a barrel.
+  m_text: To hit the barrel you should press button 2(or special button with ammo,
+    if you are on the movile device), after which the weapon will be used. By default,
+    you have the machine gun(soon there will be more weaponry), and you have to launch
+    3 bullets to destroy the barrel
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 578daac93d93d294eb93ed8461c9a5e1, type: 2}
   m_sharedMaterial: {fileID: -7649612085785211560, guid: 578daac93d93d294eb93ed8461c9a5e1, type: 2}
@@ -12541,7 +12497,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2076325494
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12743,7 +12699,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.17762081, y: 0.21385187}
   m_AnchorMax: {x: 0.17762081, y: 0.21385187}
-  m_AnchoredPosition: {x: -147, y: -128}
+  m_AnchoredPosition: {x: 6, y: -128}
   m_SizeDelta: {x: 248.3778, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2091847525
@@ -12886,7 +12842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2124670508
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14521,6 +14477,7 @@ MonoBehaviour:
   GameScorePanel: {fileID: 0}
   UprisePlayerButton: {fileID: 0}
   LaunchMissileButton: {fileID: 0}
+  LaunchBulletButton: {fileID: 0}
   ScoreText: {fileID: 0}
   CoinText: {fileID: 0}
   KeyText: {fileID: 0}
@@ -15445,6 +15402,7 @@ MonoBehaviour:
   GameScorePanel: {fileID: 0}
   UprisePlayerButton: {fileID: 0}
   LaunchMissileButton: {fileID: 0}
+  LaunchBulletButton: {fileID: 0}
   PauseButton: {fileID: 0}
   ExplosionClip: {fileID: 8300000, guid: c44c944366c6c614e8b22dfdda4329e3, type: 3}
   Gravity: -9.8
